@@ -12,6 +12,7 @@ import routes from '../both/routes';
 import {todosGetAll} from '../../api/todos/methods';
 import Loadable from 'react-loadable';
 
+
 Loadable.preloadAll().then(() => {
   console.log('SSR init');
 });
@@ -49,7 +50,8 @@ onPageLoad((sink) => {
   sink.renderIntoElementById('app', renderToString(<AppLoadable/>));
 
 
-  console.log(modules);
+  if (Meteor.isServer)
+    console.log(modules);
 
   console.log(renderCount++);
   const helmet = Helmet.renderStatic();

@@ -2,5 +2,6 @@
   "presets": [
     "stage-2",
     "react"
-  ]
+  ],
+  "plugins": ["react-loadable/babel"]
 }

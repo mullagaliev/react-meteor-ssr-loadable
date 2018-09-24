@@ -1,9 +1,10 @@
-## Scotty, we need more power with:
+## Технологии
 
 - React
 - Redux
 - React Router 4
 - Server Side Rendering support with Redux state and Helmet
+- ReactMeteorContainer
 
 #### How to run:
 
@@ -13,3 +14,5 @@
 
 
 #### TODO
+
+- Добавить работу через контекс для ReactMeteorContainer

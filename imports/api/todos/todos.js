@@ -12,6 +12,7 @@ Todos.deny({
 Todos.schema = new SimpleSchema({
   message: { type: String },
   finished: { type: Boolean, defaultValue: false },
+  listId: { type: Number, defaultValue: 0}
 });
 
 Todos.attachSchema(Todos.schema);

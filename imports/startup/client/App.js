@@ -5,12 +5,15 @@ import thunk from 'redux-thunk';
 import {createStore, applyMiddleware} from 'redux';
 import routes from '../both/routes';
 import mainReducer from '../../api/redux/reducers';
+import { createLogger } from 'redux-logger';
+
+const logger = createLogger({});
 
 const preloadedState = window.__PRELOADED_STATE__; // eslint-disable-line
 
 delete window.__PRELOADED_STATE__; // eslint-disable-line
 
-const store = createStore(mainReducer, preloadedState, applyMiddleware(thunk));
+const store = createStore(mainReducer, preloadedState, applyMiddleware(thunk, logger));
 
 class App extends Component {
   render() {

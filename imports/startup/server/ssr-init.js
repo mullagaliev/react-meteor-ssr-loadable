@@ -12,7 +12,6 @@ import routes from '../both/routes';
 import {todosGetAll} from '../../api/todos/methods';
 import Loadable from 'react-loadable';
 
-
 Loadable.preloadAll().then(() => {
   console.log('SSR init');
 });
@@ -23,6 +22,7 @@ let renderCount = 0;
 onPageLoad((sink) => {
 
   const context = {};
+  global.__state__ = {};
   const initial = todosGetAll.call({});
 
   const store = createStore(mainReducer, {todos: initial}, applyMiddleware(thunk));
@@ -49,6 +49,8 @@ onPageLoad((sink) => {
 
   sink.renderIntoElementById('app', renderToString(<AppLoadable/>));
 
+  if(!global.__STATE__)
+    global.__STATE__ = {};
 
   if (Meteor.isServer)
     console.log(modules);
@@ -66,6 +68,11 @@ onPageLoad((sink) => {
   sink.appendToBody(`
       <script>
         window.__MODULES__=${JSON.stringify(modules)};
+      </script>
+  `);
+  sink.appendToBody(`
+      <script>
+        window.__STATE__=${JSON.stringify(global.__STATE__ ).replace(/</g, '\\u003c')};
       </script>
   `);
 });

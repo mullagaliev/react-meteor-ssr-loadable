@@ -4,7 +4,7 @@ import { array, func } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import Todo from '../../components/todo-item/Todo';
 import { callAddTodo } from '../../../api/redux/async-actions';
-import EventListener, {withOptions} from 'react-event-listener';
+import EventListener from 'react-event-listener';
 
 class Home extends React.Component{
   constructor(props){

@@ -1,12 +1,12 @@
 import React from "react";
 import {Todos} from "../../../api/todos/todos";
 import SimpleHome from './SimpleHome';
-import ReactMeteorContainer from '../../HoC/ReactMeteorContainer';
+import {ReactMeteorContainer} from '../../HoC/ReactMeteorContainer';
 import {Meteor} from "meteor/meteor";
 
 
 const stateID = "todos-container";
-const subscribeKeys = ['tasks'];
+const subscribeKeys = ['tasks1', 'tasks2'];
 
 const listId = 1;
 
@@ -20,4 +20,4 @@ const getState = function () {
   };
 };
 
-export const HomeMeteorContainer = ReactMeteorContainer({stateID, subscribeKeys, getState})(SimpleHome);
+export const HomeMeteorContainer = ReactMeteorContainer(stateID, subscribeKeys, getState)(SimpleHome);

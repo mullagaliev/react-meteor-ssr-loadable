@@ -4,6 +4,7 @@
   "description": "Meteor React boilerplate",
   "scripts": {
     "start": "meteor run --port 8001",
+    "start:production": "meteor run --port 8001 --production",
     "lint": "eslint .",
     "pretest": "npm run lint --silent",
     "test": "echo \"Error: no test specified\" && exit 1"

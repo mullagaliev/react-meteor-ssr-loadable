@@ -3,7 +3,7 @@ import Loadable from 'react-loadable';
 import Loading from '../../components/loading/Loading';
 
 export const HomeLoadable = Loadable({
-  loader: () => import('../../pages/home/Home'),
+  loader: () => import('../../pages/home/HomeMeteorContainer'),
   loading: Loading
 });
 

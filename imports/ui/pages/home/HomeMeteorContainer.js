@@ -21,3 +21,4 @@ const getState = function () {
 };
 
 export const HomeMeteorContainer = ReactMeteorContainer(stateID, subscribeKeys, getState)(SimpleHome);
+export default HomeMeteorContainer;

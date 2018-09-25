@@ -16,6 +16,10 @@ delete window.__PRELOADED_STATE__; // eslint-disable-line
 const store = createStore(mainReducer, preloadedState, applyMiddleware(thunk, logger));
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    console.log('init App');
+  }
   render() {
     return (
       <Provider store={store}>

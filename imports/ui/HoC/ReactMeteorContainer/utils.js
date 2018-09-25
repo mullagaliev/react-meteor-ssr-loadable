@@ -1,4 +1,5 @@
 import {Meteor} from "meteor/meteor";
+require("babel-polyfill");
 
 export const waitAllSubscribe = async function(subscribeKeys) {
   try {

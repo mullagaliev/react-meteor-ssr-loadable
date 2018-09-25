@@ -1,7 +1,15 @@
 {
   "presets": [
-    "stage-2",
-    "react"
+    "env",
+    "react",
+    "stage-2"
   ],
-  "plugins": ["react-loadable/babel"]
+  "plugins": [
+    "dynamic-import-node",
+    "syntax-async-functions",
+    "transform-regenerator",
+    "transform-class-properties",
+    "react-hot-loader/babel",
+    "react-loadable/babel"
+  ]
 }

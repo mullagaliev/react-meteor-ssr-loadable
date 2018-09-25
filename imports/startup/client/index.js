@@ -11,7 +11,7 @@ console.log(Meteor, onPageLoad);
 //   if (Meteor.isClient) {
     console.log('ready');
     // console.log(document);
-    Loadable.preloadAll().then(() => {
+    Loadable.preloadReady().then(() => {
       ReactDOM.hydrate(<App/>, document.getElementById('app'));
     }).catch(err=> console.log(err));
   // }

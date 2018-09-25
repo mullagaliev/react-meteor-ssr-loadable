@@ -143,7 +143,7 @@
       "publicPath": "main.js"
     }
   ],
-  "../../pages/About": [
+  "../../ui/pages/About": [
     {
       "id": "./imports/ui/pages/About/index.js",
       "name": "./imports/ui/pages/About/index.js",
@@ -151,26 +151,10 @@
       "publicPath": "main.js"
     }
   ],
-  "../../ui/pages/LoadablePages": [
-    {
-      "id": "./imports/ui/pages/LoadablePages/index.js",
-      "name": "./imports/ui/pages/LoadablePages/index.js",
-      "file": "main.js",
-      "publicPath": "main.js"
-    }
-  ],
-  "../../pages/home/HomeMeteorContainer": [
+  "./HomeMeteorContainer": [
     {
       "id": "./imports/ui/pages/home/HomeMeteorContainer.js",
       "name": "./imports/ui/pages/home/HomeMeteorContainer.js",
-      "file": "main.js",
-      "publicPath": "main.js"
-    }
-  ],
-  "../../ui/pages/home/HomeMeteorContainer2": [
-    {
-      "id": "./imports/ui/pages/home/HomeMeteorContainer2.js",
-      "name": "./imports/ui/pages/home/HomeMeteorContainer2.js",
       "file": "main.js",
       "publicPath": "main.js"
     }
@@ -183,10 +167,26 @@
       "publicPath": "main.js"
     }
   ],
+  "../../ui/pages/home": [
+    {
+      "id": "./imports/ui/pages/home/index.js",
+      "name": "./imports/ui/pages/home/index.js",
+      "file": "main.js",
+      "publicPath": "main.js"
+    }
+  ],
   "../../pages/subpage/Subpage": [
     {
       "id": "./imports/ui/pages/subpage/Subpage.js",
       "name": "./imports/ui/pages/subpage/Subpage.js",
+      "file": "main.js",
+      "publicPath": "main.js"
+    }
+  ],
+  "../../ui/pages/subpage": [
+    {
+      "id": "./imports/ui/pages/subpage/index.js",
+      "name": "./imports/ui/pages/subpage/index.js",
       "file": "main.js",
       "publicPath": "main.js"
     }
@@ -375,7 +375,7 @@
       "publicPath": "main.js"
     }
   ],
-  "../../modules/_core": [
+  "./modules/_core": [
     {
       "id": "./node_modules/core-js/modules/_core.js",
       "name": "./node_modules/core-js/modules/_core.js",

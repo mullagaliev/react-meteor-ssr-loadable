@@ -76,6 +76,13 @@ Loadable.preloadAll().then(() => {
     //   return false;
     // });
 
+    sink.appendToBody(`<script src="manifest.js"></script>`);
+      bundles.map(bundle => {
+          if(bundle && bundle.publicPath)
+            return `<script src="${bundle.publicPath}"></script>`;
+          return '';
+        }).join('\n');
+    sink.appendToBody(`<script src="main.js"></script>`);
   });
 });
 
